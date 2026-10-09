@@ -1,0 +1,4 @@
+Contact: mailto:info@urnalia.es
+Expires: 2027-10-09T00:00:00.000Z
+Preferred-Languages: es, en, ca
+Canonical: https://urnalia.es/.well-known/security.txt
