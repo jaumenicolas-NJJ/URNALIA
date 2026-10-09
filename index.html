@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Urnalia · Planificación y control de procesos electorales para ayuntamientos</title>
+<meta name="description" content="Urnalia calcula los plazos de la LOREG desde la convocatoria, avisa de lo que toca cada día y ordena formaciones, locales, mesas, documentos y personal. Se instala en los servidores del ayuntamiento.">
+<link rel="canonical" href="https://urnalia.es/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Urnalia">
+<meta property="og:title" content="Urnalia · El calendario electoral del ayuntamiento, bajo control">
+<meta property="og:description" content="Plazos de la LOREG calculados al día, avisos, mesas, formaciones, auditoría y permisos por casillas. Instalado en vuestros servidores.">
+<meta property="og:url" content="https://urnalia.es/">
+<meta property="og:image" content="https://urnalia.es/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b1730">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/icono-180.png">
+<link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+<script src="js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#inicio" aria-label="Urnalia, inicio"><img src="img/logo.svg" alt="" width="34" height="34"><span>Urnalia</span></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu"><span class="sr">Menú</span><i></i><i></i><i></i></button>
+    <nav id="navMenu" aria-label="Principal">
+      <a href="#funciones">Funciones</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#seguridad">Seguridad</a>
+      <a href="#instalacion">Instalación</a>
+      <a href="#precios">Precios</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="btn btn-sm btn-light" href="#contacto">Pedir una demostración</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- PORTADA -->
+<section class="hero" id="inicio">
+  <div class="hero-bg" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span><span class="grid"></span></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span>Elecciones Generales del 29 de noviembre de 2026: ya preparado</p>
+      <h1>El calendario electoral del ayuntamiento, <em>bajo control</em>.</h1>
+      <p class="lead">Escribe la fecha del decreto de convocatoria. Urnalia despliega los 110 trámites de la LOREG con su artículo, su plazo y su responsable, y cada mañana te dice qué vence, qué empieza y qué se ha quedado atrás.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#contacto">Pedir una demostración</a>
+        <a class="btn btn-ghost" href="#funciones">Ver cómo funciona <span aria-hidden="true">→</span></a>
+      </div>
+      <ul class="hero-facts">
+        <li><b>En vuestro servidor</b>Los datos no salen del ayuntamiento</li>
+        <li><b>Sin base de datos</b>Un instalador de Windows y listo</li>
+        <li><b>Auditoría íntegra</b>Cada cambio, firmado con su huella</li>
+      </ul>
+    </div>
+    <div class="hero-shot" aria-hidden="true">
+      <div class="tilt" id="tilt">
+        <div class="browser">
+          <div class="bar"><i></i><i></i><i></i><span>urnalia.ayuntamiento.local</span></div>
+          <img src="img/capturas/seguimiento-sm.webp" srcset="img/capturas/seguimiento-sm.webp 1200w, img/capturas/seguimiento.webp 2400w" sizes="(max-width: 900px) 92vw, 640px" alt="" width="1200" height="750">
+        </div>
+        <div class="float f-phone"><img src="img/capturas/movil.webp" alt="" width="260" height="563"></div>
+        <div class="float f-badge f1"><span class="ok">✓</span><div><b>Registro íntegro</b><small>71 anotaciones comprobadas</small></div></div>
+        <div class="float f-badge f2"><span class="warn">!</span><div><b>2 plazos vencidos</b><small>Consulta del censo · Exposición</small></div></div>
+        <div class="float f-badge f3"><span class="day">D21</span><div><b>Faltan 33 días</b><small>Presentación y proclamación</small></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap stats" id="stats">
+    <div><b data-count="110">110</b><span>trámites de la LOREG, con su artículo</span></div>
+    <div><b data-count="54">54</b><span>días calculados desde el BOE, sin hojas de cálculo</span></div>
+    <div><b data-count="3">3</b><span>tipos de elecciones: generales, locales y europeas</span></div>
+    <div><b data-count="0">0</b><span>datos personales fuera de vuestra red</span></div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="section problem">
+  <div class="wrap narrow reveal">
+    <p class="kicker">Por qué existe</p>
+    <h2>Unas elecciones son cincuenta y cuatro días sin margen de error.</h2>
+    <p class="big">La Junta Electoral Central publica el calendario en PDF. Después, en cada ayuntamiento, alguien lo copia a una hoja de cálculo, lo reparte por correo y confía en que nadie se olvide del sorteo de mesas, de la exposición del censo o de los lugares para la campaña. Cuando la Junta mueve una fecha, la hoja ya no vale.</p>
+    <p class="big">Urnalia nace de esa experiencia en una secretaría municipal. Sustituye la hoja, el correo y la memoria por un único sitio donde está todo: el plazo legal, quién lo lleva, en qué punto está y qué documento lo acredita.</p>
+  </div>
+</section>
+
+<!-- FUNCIONES -->
+<section class="section features" id="funciones">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="kicker">Funciones</p>
+      <h2>Todo el proceso, de la convocatoria a la constitución de la corporación.</h2>
+      <p>Pulsa cualquier captura para verla a tamaño completo. Son pantallas reales del programa con datos de demostración.</p>
+    </div>
+
+    <article class="feat reveal">
+      <div class="feat-txt">
+        <span class="num">01</span>
+        <h3>Seguimiento: qué toca hoy</h3>
+        <p>Al entrar, lo primero que ves es la jornada: los plazos vencidos sin cerrar, los que están en curso, los que vencen hoy y los que empiezan en los próximos siete días. La barra de fases sitúa el día del proceso (D21, D38…) y cuenta lo que falta para la votación.</p>
+        <ul class="ticks"><li>Filtro por responsable: Ayuntamiento, Junta, Oficina del Censo, partidos</li><li>Notas y responsables en cada trámite</li><li>Informe de situación imprimible para la reunión de la mañana</li></ul>
+      </div>
+      <button class="shot" data-full="img/capturas/seguimiento.webp" aria-label="Ampliar la captura de Seguimiento"><img src="img/capturas/seguimiento-sm.webp" alt="Pantalla de Seguimiento con plazos vencidos, en plazo hoy y próximos" loading="lazy" width="1200" height="750"></button>
+    </article>
+
+    <article class="feat rev reveal">
+      <div class="feat-txt">
+        <span class="num">02</span>
+        <h3>Plazos legales con su artículo</h3>
+        <p>Cada trámite lleva el artículo de la LOREG o la instrucción de la Junta que lo sostiene, las fechas de inicio y fin y su forma de cómputo. Si la Junta Electoral acuerda otra fecha, se cambia y el programa pide el motivo, que queda en el registro de auditoría.</p>
+        <ul class="ticks"><li>Generales, locales y europeas, con sus diferencias</li><li>Tareas e hitos propios del ayuntamiento</li><li>Mover las elecciones recalcula todo al instante</li></ul>
+      </div>
+      <button class="shot" data-full="img/capturas/plazos.webp" aria-label="Ampliar la captura de Plazos"><img src="img/capturas/plazos-sm.webp" alt="Lista de trámites con artículo de la LOREG, fechas y estado" loading="lazy" width="1200" height="750"></button>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-txt">
+        <span class="num">03</span>
+        <h3>Resumen e hitos del proceso</h3>
+        <p>Una vista de dirección para el secretario o el alcalde: hitos de la convocatoria a la proclamación de electos, plazos abiertos, vencidos y trámites municipales cerrados. Se imprime en una hoja A4 para la junta de portavoces.</p>
+        <ul class="ticks"><li>Hitos propios marcados con un rombo</li><li>Contadores de lo cerrado y lo pendiente</li></ul>
+      </div>
+      <button class="shot" data-full="img/capturas/panel.webp" aria-label="Ampliar la captura de Resumen"><img src="img/capturas/panel-sm.webp" alt="Resumen con hitos del proceso y contadores" loading="lazy" width="1200" height="750"></button>
+    </article>
+
+    <div class="gallery reveal" role="tablist" aria-label="Más vistas del programa">
+      <div class="gal-tabs">
+        <button role="tab" aria-selected="true" data-g="gantt">Cronograma</button>
+        <button role="tab" aria-selected="false" data-g="calendario">Calendario</button>
+        <button role="tab" aria-selected="false" data-g="agenda">Agenda</button>
+        <button role="tab" aria-selected="false" data-g="ficha">Ficha de un trámite</button>
+      </div>
+      <div class="gal-stage">
+        <button class="shot wide" id="galShot" data-full="img/capturas/gantt.webp" aria-label="Ampliar la captura"><img id="galImg" src="img/capturas/gantt-sm.webp" alt="Cronograma de los trámites electorales" loading="lazy" width="1200" height="750"></button>
+        <p class="gal-cap" id="galCap">Diagrama de Gantt de los 54 días, con la línea de hoy y la de la votación. Se ve de un vistazo qué trámites se solapan.</p>
+      </div>
+    </div>
+
+    <article class="feat rev reveal">
+      <div class="feat-txt">
+        <span class="num">04</span>
+        <h3>Locales, mesas y jornada electoral</h3>
+        <p>Pega las mesas desde el Excel de la Oficina del Censo y Urnalia crea los locales, las mesas y sus nueve miembros. Lleva la cuenta de notificaciones, excusas y suplentes, y prepara la jornada: espacios para la campaña, banderolas, pancartas y prismas.</p>
+        <ul class="ticks"><li>Códigos de alarma de los colegios, visibles solo con permiso</li><li>Listados imprimibles por local</li><li>Traer los locales de unas elecciones anteriores</li></ul>
+      </div>
+      <button class="shot" data-full="img/capturas/mesas.webp" aria-label="Ampliar la captura de Mesas"><img src="img/capturas/mesas-sm.webp" alt="Locales y mesas con miembros notificados" loading="lazy" width="1200" height="750"></button>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-txt">
+        <span class="num">05</span>
+        <h3>Formaciones, candidaturas y documentos</h3>
+        <p>Representantes, teléfonos y correos de cada formación; candidaturas proclamadas con su seguimiento; y los documentos adjuntos a cada trámite (decretos, actas, notificaciones), con papelera para recuperar lo borrado.</p>
+        <ul class="ticks"><li>Pegar desde Excel o traer de otras elecciones</li><li>Agenda de contactos de la Junta, la OCE y servicios municipales</li></ul>
+      </div>
+      <button class="shot" data-full="img/capturas/formaciones.webp" aria-label="Ampliar la captura de Formaciones"><img src="img/capturas/formaciones-sm.webp" alt="Formaciones con representantes y candidaturas proclamadas" loading="lazy" width="1200" height="750"></button>
+    </article>
+  </div>
+</section>
+
+<!-- CALCULADORA -->
+<section class="section calc" id="calculadora">
+  <div class="wrap">
+    <div class="calc-in reveal">
+      <div class="calc-copy">
+        <p class="kicker light">Pruébalo aquí</p>
+        <h2>Elige la fecha de la votación.</h2>
+        <p>Es una muestra del cálculo que hace Urnalia: aquí ves seis fechas clave; el programa calcula ciento diez. Funciona en tu navegador y no envía nada a ningún sitio.</p>
+        <label class="calc-field"><span>Día de la votación</span><input type="date" id="calcVot" value="2026-11-29"></label>
+        <p class="calc-warn" id="calcWarn" hidden>Las elecciones se celebran en domingo. Revisa la fecha.</p>
+      </div>
+      <ol class="timeline" id="calcOut" aria-live="polite">
+        <li><span class="d">D0</span><div><b>Publicación del decreto en el BOE</b><time data-off="0"></time></div></li>
+        <li><span class="d">D15</span><div><b>Presentación de candidaturas</b><time data-off="15" data-to="20"></time></div></li>
+        <li><span class="d">D25</span><div><b>Sorteo de los miembros de las mesas</b><time data-off="25" data-to="29"></time></div></li>
+        <li><span class="d">D27</span><div><b>Proclamación de candidaturas</b><time data-off="27"></time></div></li>
+        <li><span class="d">D38</span><div><b>Campaña electoral</b><time data-off="38" data-to="52"></time></div></li>
+        <li class="hl"><span class="d">D54</span><div><b>Votación</b><time data-off="54"></time></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- SEGURIDAD -->
+<section class="section security" id="seguridad">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="kicker">Seguridad y protección de datos</p>
+      <h2>Pensado para un servicio de informática municipal exigente.</h2>
+      <p>Urnalia trata nombres, teléfonos y miembros de mesa. Por eso se instala dentro de la red del ayuntamiento y cada pieza está hecha para que el responsable de seguridad pueda revisarla.</p>
+    </div>
+    <div class="sec-grid">
+      <div class="card reveal"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4v6c0 4-3.4 7.4-8 8-4.6-.6-8-4-8-8z"/></svg></div><h3>Los datos se quedan en casa</h3><p>Se instala en un equipo o en un servidor del ayuntamiento. Ninguna nube de terceros, ninguna transferencia internacional, ningún contrato de encargo adicional.</p></div>
+      <div class="card reveal"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div><h3>Permisos por casillas</h3><p>Para cada usuario y cada parte del programa: sin acceso, ver o modificar. El servidor comprueba el permiso en cada operación; ocultar un botón no basta.</p></div>
+      <div class="card reveal"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z"/></svg></div><h3>Auditoría encadenada</h3><p>Quién cambió qué, cuándo, desde qué equipo, con el valor anterior y el nuevo. Cada anotación lleva una huella SHA-256 enlazada con la anterior: si alguien edita el registro a mano, se detecta.</p></div>
+      <div class="card reveal"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c.7-3.4 3-5 6-5s5.3 1.6 6 5"/><path d="M16 4.5a3 3 0 0 1 0 6M18 15c1.8.6 2.7 2.2 3 5"/></svg></div><h3>Directorio activo</h3><p>Cada empleado entra con su usuario de Windows, contra el controlador de dominio por LDAPS o STARTTLS. Urnalia no guarda esas contraseñas.</p></div>
+      <div class="card reveal"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 10h16M9 14h6"/></svg></div><h3>Copias completas y restauración</h3><p>Copias automáticas en un ZIP con la huella de cada archivo, en la carpeta que elijáis. Restaurar es un clic y antes se guarda el estado actual. La auditoría nunca se sobrescribe.</p></div>
+      <div class="card reveal"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4l-5 8 5 8M16 4l5 8-5 8"/></svg></div><h3>Código sin dependencias</h3><p>El servidor no usa paquetes de terceros: menos piezas que mantener y ninguna vulnerabilidad heredada de librerías ajenas. Contraseñas con PBKDF2 y sesiones que caducan solas.</p></div>
+    </div>
+    <p class="note reveal">Urnalia se ha diseñado teniendo presentes el Reglamento General de Protección de Datos y el Esquema Nacional de Seguridad. La categorización del sistema y la declaración de conformidad corresponden a cada entidad; os facilitamos la documentación técnica que la acompañe.</p>
+  </div>
+</section>
+
+<!-- AUDITORÍA Y PERMISOS: capturas -->
+<section class="section duo">
+  <div class="wrap duo-in">
+    <figure class="reveal"><button class="shot" data-full="img/capturas/auditoria.webp" aria-label="Ampliar la captura de Auditoría"><img src="img/capturas/auditoria-sm.webp" alt="Registro de auditoría con la comprobación de integridad superada" loading="lazy" width="1200" height="750"></button><figcaption><b>Registro de auditoría.</b> Filtros por fecha, usuario y tipo; exportación a Excel; comprobación de integridad.</figcaption></figure>
+    <figure class="reveal"><button class="shot" data-full="img/capturas/permisos.webp" aria-label="Ampliar la captura de Permisos"><img src="img/capturas/permisos-sm.webp" alt="Ventana de permisos por casillas para un usuario" loading="lazy" width="1200" height="750"></button><figcaption><b>Permisos por casillas.</b> Perfiles listos (Administrador, Secretaría, Consulta) o a medida.</figcaption></figure>
+  </div>
+</section>
+
+<!-- INSTALACIÓN -->
+<section class="section install" id="instalacion">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="kicker">Instalación</p>
+      <h2>Un instalador de Windows. Ni base de datos ni servidor web aparte.</h2>
+    </div>
+    <div class="modes">
+      <div class="mode reveal">
+        <h3>En un equipo</h3>
+        <p>Para un municipio pequeño: se instala en el ordenador de secretaría y se abre desde un acceso directo. Funciona sin conexión a internet.</p>
+      </div>
+      <div class="mode reveal featured">
+        <h3>Servidor de red</h3>
+        <p>Se instala una vez en un servidor y el resto del personal entra con el navegador desde su puesto. Arranca solo con Windows y abre el puerto únicamente para la red interna.</p>
+      </div>
+    </div>
+    <ol class="steps reveal">
+      <li><b>Instalar</b><span>Se ejecuta el instalador con una cuenta de administrador y se elige el modo.</span></li>
+      <li><b>Crear el administrador</b><span>Con la clave de instalación que el programa genera en el propio servidor.</span></li>
+      <li><b>Dar de alta las elecciones</b><span>Tipo y fecha. Los plazos aparecen calculados.</span></li>
+      <li><b>Invitar al equipo</b><span>Usuarios propios o del directorio activo, con sus permisos.</span></li>
+    </ol>
+    <dl class="reqs reveal">
+      <div><dt>Sistema</dt><dd>Windows 10, 11 o Windows Server de 64 bits</dd></div>
+      <div><dt>Navegador</dt><dd>Edge, Chrome o Firefox actuales</dd></div>
+      <div><dt>Espacio</dt><dd>Unos 150 MB más los documentos que adjuntéis</dd></div>
+      <div><dt>Actualizar</dt><dd>Se ejecuta el instalador nuevo encima; los datos no se tocan</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- HOJA DE RUTA -->
+<section class="section roadmap">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="kicker">En desarrollo</p>
+      <h2>Lo que llega en las próximas versiones.</h2>
+    </div>
+    <div class="road">
+      <div class="road-item reveal"><span class="tag">Personal electoral</span><h3>Montadores, coordinadores, cabinas, administrativos</h3><p>Tipos de personal y puestos que define el propio ayuntamiento, vinculados a cada colegio. Importación desde Excel con validación de DNI e IBAN y exportación de los pagos en SEPA y para SICAL.</p></div>
+      <div class="road-item reveal"><span class="tag">Calendarios</span><h3>Elecciones autonómicas</h3><p>Calendarios oficiales por tipo de elección, con los artículos de cada ley electoral autonómica, comprobados contra convocatorias reales.</p></div>
+      <div class="road-item reveal"><span class="tag">Idiomas</span><h3>Lenguas cooficiales</h3><p>Catalán, valenciano, gallego y euskera en la interfaz y en los documentos.</p></div>
+      <div class="road-item reveal"><span class="tag">Documentos</span><h3>Bandos, edictos y avisos</h3><p>Plantillas con el escudo del ayuntamiento, exportación a PDF y a calendario (ICS) y alertas por correo electrónico.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIOS -->
+<section class="section pricing" id="precios">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="kicker">Precios</p>
+      <h2>Licencia por tramos de población. Sin cuotas por usuario.</h2>
+      <p>Pago único por la licencia y un mantenimiento anual opcional que incluye las actualizaciones normativas. Importes pensados para caber en un contrato menor.</p>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>Municipios</h3>
+        <p class="price"><small>desde</small> 300 €</p>
+        <p class="sub">licencia, IVA no incluido</p>
+        <ul class="ticks"><li>Usuarios ilimitados</li><li>Instalación en equipo o servidor</li><li>Todas las funciones de la versión vigente</li><li>Importe según tramo de población</li></ul>
+        <a class="btn btn-outline" href="#contacto">Pedir presupuesto</a>
+      </div>
+      <div class="plan reveal featured">
+        <span class="ribbon">Recomendado</span>
+        <h3>Diputaciones</h3>
+        <p class="price">Convenio provincial</p>
+        <p class="sub">un contrato para todos los municipios</p>
+        <ul class="ticks"><li>Licencia para los ayuntamientos de la provincia</li><li>Instalación centralizada o en cada municipio</li><li>Formación a los secretarios</li><li>Interlocutor único</li></ul>
+        <a class="btn btn-primary" href="#contacto">Hablemos</a>
+      </div>
+      <div class="plan reveal">
+        <h3>Mantenimiento</h3>
+        <p class="price"><small>desde</small> 90 € <small>/año</small></p>
+        <p class="sub">opcional, IVA no incluido</p>
+        <ul class="ticks"><li>Actualizaciones a cada cambio normativo</li><li>Nuevas versiones del programa</li><li>Soporte por correo electrónico</li><li>Ayuda antes de cada convocatoria</li></ul>
+        <a class="btn btn-outline" href="#contacto">Más información</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREGUNTAS -->
+<section class="section faq" id="preguntas">
+  <div class="wrap narrow">
+    <div class="head reveal">
+      <p class="kicker">Preguntas frecuentes</p>
+      <h2>Lo que suelen preguntar secretarías e informática.</h2>
+    </div>
+    <div class="qa reveal">
+      <details><summary>¿Sustituye a las aplicaciones de la Oficina del Censo Electoral?</summary><p>No. El sorteo de mesas y el censo siguen haciéndose con las herramientas oficiales. Urnalia organiza el trabajo alrededor: plazos, responsables, mesas importadas desde vuestros listados, personal, documentos y seguimiento.</p></details>
+      <details><summary>¿De dónde salen los plazos?</summary><p>De la Ley Orgánica del Régimen Electoral General y de las instrucciones de la Junta Electoral Central, con el artículo indicado en cada trámite. El cómputo parte de la publicación del decreto en el BOE (día 0) y llega a la votación (día 54) y a la constitución de la corporación en las locales.</p></details>
+      <details><summary>¿Y si la Junta Electoral cambia una fecha?</summary><p>Se ajusta a mano en la ficha del trámite. El programa pide el motivo, por ejemplo el acuerdo de la Junta de Zona, y lo anota en el registro de auditoría con el nombre de quien lo cambió.</p></details>
+      <details><summary>¿Necesita internet?</summary><p>No. Funciona dentro de la red del ayuntamiento, incluso en un equipo sin conexión. Solo se necesita internet para descargar una versión nueva.</p></details>
+      <details><summary>¿Cuántos usuarios puede tener?</summary><p>Los que necesitéis. La licencia no se cobra por usuario.</p></details>
+      <details><summary>¿Qué pasa con los datos de unas elecciones cuando termina el proceso?</summary><p>Se archivan íntegras y quedan en modo de solo lectura, consultables en «Archivo». Las siguientes elecciones pueden traer locales, mesas y formaciones de las anteriores.</p></details>
+      <details><summary>¿Se puede probar antes de comprar?</summary><p>Sí. Os enseñamos el programa por videoconferencia con datos de demostración y os dejamos una versión de prueba para instalar en un equipo.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section contact" id="contacto">
+  <div class="wrap">
+    <div class="contact-in reveal">
+      <div>
+        <h2>Veámoslo funcionando con vuestras elecciones.</h2>
+        <p>Una demostración de treinta minutos por videoconferencia, con las Generales de noviembre como ejemplo. Escribidnos indicando el ayuntamiento o la diputación y un teléfono.</p>
+      </div>
+      <div class="contact-box">
+        <a class="mail" href="mailto:info@urnalia.es?subject=Demostraci%C3%B3n%20de%20Urnalia">info@urnalia.es</a>
+        <a class="btn btn-primary btn-lg" href="mailto:info@urnalia.es?subject=Demostraci%C3%B3n%20de%20Urnalia">Pedir una demostración</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="brand"><img src="img/logo.svg" alt="" width="28" height="28"><span>Urnalia</span></div>
+    <p>Planificación y control de procesos electorales para ayuntamientos y diputaciones.</p>
+    <nav aria-label="Legal"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="accesibilidad.html">Accesibilidad</a></nav>
+    <p class="copy">© 2026 Urnalia. Esta web no usa cookies ni recoge datos.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Captura ampliada">
+  <button class="lb-close" id="lbClose" aria-label="Cerrar">×</button>
+  <img id="lbImg" alt="">
+</div>
+</body>
+</html>
