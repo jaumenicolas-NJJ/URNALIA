@@ -8,7 +8,7 @@
   /* cabecera: fondo al desplazarse y menú en el móvil */
   var nav = d.getElementById('nav'), toggle = d.getElementById('navToggle'), menu = d.getElementById('navMenu');
   function onScroll() { if (nav) nav.classList.toggle('scrolled', window.scrollY > 24); }
-  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true }); requestAnimationFrame(onScroll);
   if (toggle && menu) {
     toggle.addEventListener('click', function () {
       var open = toggle.getAttribute('aria-expanded') !== 'true';
@@ -115,10 +115,10 @@
       var txt = to ? 'del ' + fmtS.format(a) + ' al ' + fmtS.format(base + (+to) * DAY) : fmt.format(a);
       t.textContent = txt.charAt(0).toUpperCase() + txt.slice(1);
       t.setAttribute('datetime', new Date(a).toISOString().slice(0, 10));
-      t.classList.remove('flash'); void t.offsetWidth; t.classList.add('flash');
+      if (calc.ran) { t.classList.remove('flash'); void t.offsetWidth; t.classList.add('flash'); }
     });
   }
-  if (inp) { inp.addEventListener('input', calc); inp.addEventListener('change', calc); calc(); }
+  if (inp) { inp.addEventListener('input', calc); inp.addEventListener('change', calc); calc(); calc.ran = true; }
 
   /* visitas: GoatCounter, sin cookies ni datos personales. Solo en urnalia.es, y nunca con «Do Not Track» ni en navegadores automatizados. */
   function count(p, ev) {
