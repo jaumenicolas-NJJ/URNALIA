@@ -1,4 +1,4 @@
-/* Urnalia · web comercial. Sin dependencias, sin cookies, sin llamadas a terceros. */
+/* Urnalia · web comercial. Sin dependencias ni cookies. Solo llama fuera para contar visitas (GoatCounter, anónimo). */
 (function () {
   'use strict';
   var d = document, root = d.documentElement;
@@ -119,4 +119,20 @@
     });
   }
   if (inp) { inp.addEventListener('input', calc); inp.addEventListener('change', calc); calc(); }
+
+  /* visitas: GoatCounter, sin cookies ni datos personales. Solo en urnalia.es, y nunca con «Do Not Track» ni en navegadores automatizados. */
+  function count(p, ev) {
+    if (!/(^|\.)urnalia\.es$/.test(location.hostname) || navigator.doNotTrack === '1' || navigator.webdriver) return;
+    var q = 'p=' + encodeURIComponent(p) + '&t=' + encodeURIComponent(ev ? p : d.title) + (ev ? '&e=true' : '&r=' + encodeURIComponent(d.referrer) + '&s=' + [screen.width, screen.height, window.devicePixelRatio || 1].join(',')) + '&rnd=' + Math.random().toString(36).slice(2);
+    var url = 'https://urnalia.goatcounter.com/count?' + q;
+    try { if (navigator.sendBeacon && navigator.sendBeacon(url)) return; } catch (e) { /* nada */ }
+    new Image().src = url;
+  }
+  count(location.pathname);
+  d.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]'); if (!a) return;
+    var h = a.getAttribute('href');
+    if (/(^|\/)demo\//.test(h)) count('clic-prueba-online', true);
+    else if (h.indexOf('mailto:') === 0) { var sj = ''; try { sj = decodeURIComponent((h.match(/subject=([^&]*)/) || [])[1] || ''); } catch (x) { /* nada */ } count('clic-correo' + (/^acc[eé]s/i.test(sj) ? '-acceso-prueba' : /^demostraci/i.test(sj) ? '-demo-guiada' : ''), true); }
+  });
 })();
