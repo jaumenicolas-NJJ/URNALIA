@@ -60,7 +60,13 @@
   }
 
   /* galería con pestañas */
-  var GAL = {
+  var CA = root.lang === 'ca';
+  var GAL = CA ? {
+    gantt: ['Cronograma dels tràmits electorals', 'Diagrama de Gantt dels 54 dies, amb la línia d’avui i la de la votació. Es veu d’un cop d’ull quins tràmits s’encavalquen.'],
+    calendario: ['Calendari mensual amb els tràmits', 'Calendari mensual amb els tràmits de cada dia, acolorits per responsable: Ajuntament, Junta Electoral, partits, Oficina del Cens.'],
+    agenda: ['Agenda dels propers dies', 'Agenda dia a dia: què comença, què és l’últim dia i què venç. Es marca com a fet des de la mateixa llista.'],
+    ficha: ['Fitxa d’un tràmit', 'La fitxa de cada tràmit: termini legal i article, estat, responsable, dates ajustables amb motiu, documents adjunts i anotacions.']
+  } : {
     gantt: ['Cronograma de los trámites electorales', 'Diagrama de Gantt de los 54 días, con la línea de hoy y la de la votación. Se ve de un vistazo qué trámites se solapan.'],
     calendario: ['Calendario mensual con los trámites', 'Calendario mensual con los trámites de cada día, coloreados por responsable: Ayuntamiento, Junta Electoral, partidos, Oficina del Censo.'],
     agenda: ['Agenda de los próximos días', 'Agenda día a día: qué empieza, qué es el último día y qué vence. Se marca como hecho desde la propia lista.'],
@@ -72,9 +78,9 @@
       var k = b.getAttribute('data-g'); if (!GAL[k] || !gImg) return;
       tabs.forEach(function (t) { t.setAttribute('aria-selected', String(t === b)); });
       gImg.classList.add('fade');
-      var pre = new Image(); pre.src = 'img/capturas/' + k + '-sm.webp';
+      var dir = gImg.getAttribute('src').replace(/[^/]*$/, ''), pre = new Image(); pre.src = dir + k + '-sm.webp';
       pre.onload = pre.onerror = function () {
-        gImg.src = pre.src; gImg.alt = GAL[k][0]; gShot.setAttribute('data-full', 'img/capturas/' + k + '.webp');
+        gImg.src = pre.src; gImg.alt = GAL[k][0]; gShot.setAttribute('data-full', dir + k + '.webp');
         gCap.textContent = GAL[k][1]; gImg.classList.remove('fade');
       };
     });
@@ -97,8 +103,8 @@
   /* calculadora: fechas clave a partir del día de la votación (D54) */
   var inp = d.getElementById('calcVot'), out = d.getElementById('calcOut'), warn = d.getElementById('calcWarn');
   var DAY = 864e5;
-  var fmt = new Intl.DateTimeFormat('es-ES', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-  var fmtS = new Intl.DateTimeFormat('es-ES', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' });
+  var fmt = new Intl.DateTimeFormat(CA ? 'ca-ES' : 'es-ES', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+  var fmtS = new Intl.DateTimeFormat(CA ? 'ca-ES' : 'es-ES', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' });
   function calc() {
     if (!inp || !out) return;
     var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(inp.value); if (!m) return;

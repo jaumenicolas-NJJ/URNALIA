@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://urnalia.es/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://urnalia.es/</loc><xhtml:link rel="alternate" hreflang="ca" href="https://urnalia.es/ca/"/></url>
+  <url><loc>https://urnalia.es/ca/</loc><xhtml:link rel="alternate" hreflang="es" href="https://urnalia.es/"/></url>
   <url><loc>https://urnalia.es/aviso-legal.html</loc></url>
+  <url><loc>https://urnalia.es/ca/avis-legal.html</loc></url>
   <url><loc>https://urnalia.es/privacidad.html</loc></url>
+  <url><loc>https://urnalia.es/ca/privacitat.html</loc></url>
   <url><loc>https://urnalia.es/accesibilidad.html</loc></url>
+  <url><loc>https://urnalia.es/ca/accessibilitat.html</loc></url>
 </urlset>

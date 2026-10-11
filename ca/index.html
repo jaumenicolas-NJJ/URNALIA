@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Urnalia · Planificació i control de processos electorals per a ajuntaments</title>
+<meta name="description" content="Urnalia calcula els terminis de la LOREG des de la convocatòria, avisa del que toca cada dia i ordena formacions, locals, meses, documents i personal. S’instal·la als servidors de l’ajuntament.">
+<link rel="canonical" href="https://urnalia.es/ca/">
+<link rel="alternate" hreflang="es" href="https://urnalia.es/">
+<link rel="alternate" hreflang="ca" href="https://urnalia.es/ca/">
+<link rel="alternate" hreflang="x-default" href="https://urnalia.es/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ca_ES">
+<meta property="og:site_name" content="Urnalia">
+<meta property="og:title" content="Urnalia · El calendari electoral de l’ajuntament, sota control">
+<meta property="og:description" content="Terminis de la LOREG calculats al dia, avisos, meses, formacions, auditoria i permisos per caselles. Instal·lat als vostres servidors.">
+<meta property="og:url" content="https://urnalia.es/ca/">
+<meta property="og:image" content="https://urnalia.es/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b1730">
+<link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/icono-180.png">
+<link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Salta al contingut</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#inicio" aria-label="Urnalia, inici"><img class="brand-logo" src="/img/urnalia-logo.webp" alt="" width="274" height="88"></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu"><span class="sr">Menú</span><i></i><i></i><i></i></button>
+    <nav id="navMenu" aria-label="Principal">
+      <a href="#funciones">Funcions</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#seguridad">Seguretat</a>
+      <a href="#instalacion">Instal·lació</a>
+      <a href="#precios">Preus</a>
+      <a href="#preguntas">Preguntes</a>
+      <a class="btn btn-sm btn-light" href="#prueba">Prova Urnalia</a>
+      <span class="lang-sw" role="group" aria-label="Idioma"><a href="/" lang="es" hreflang="es" title="Castellano">ES</a><a href="/ca/" lang="ca" hreflang="ca" aria-current="page" title="Català">CA</a></span>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- PORTADA -->
+<section class="hero" id="inicio">
+  <div class="hero-bg" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span><span class="grid"></span></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span>Eleccions generals del 29 de novembre de 2026: ja preparat</p>
+      <h1>El calendari electoral de l’ajuntament, <em>sota control</em>.</h1>
+      <p class="lead">Escriu la data del decret de convocatòria. Urnalia desplega els 110 tràmits de la LOREG amb el seu article, el termini i el responsable, i cada matí et diu què venç, què comença i què ha quedat enrere.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#prueba">Prova-ho tu mateix</a>
+        <a class="btn btn-ghost" href="#funciones">Mira com funciona <span aria-hidden="true">→</span></a>
+      </div>
+      <ul class="hero-facts">
+        <li><b>Al vostre servidor</b>Les dades no surten de l’ajuntament</li>
+        <li><b>Sense base de dades</b>Un instal·lador de Windows i a punt</li>
+        <li><b>Auditoria íntegra</b>Cada canvi, signat amb la seva empremta</li>
+      </ul>
+    </div>
+    <div class="hero-shot" aria-hidden="true">
+      <div class="tilt" id="tilt">
+        <div class="browser">
+          <div class="bar"><i></i><i></i><i></i><span>urnalia.ajuntament.local</span></div>
+          <img src="/img/capturas/ca/seguimiento-sm.webp" srcset="/img/capturas/ca/seguimiento-sm.webp 1200w, /img/capturas/ca/seguimiento.webp 2400w" sizes="(max-width: 900px) 92vw, 640px" alt="" width="1200" height="750">
+        </div>
+        <div class="float f-phone"><img src="/img/capturas/ca/movil.webp" alt="" width="260" height="563"></div>
+        <div class="float f-badge f1"><span class="ok">✓</span><div><b>Registre íntegre</b><small>156 anotacions comprovades</small></div></div>
+        <div class="float f-badge f2"><span class="warn">!</span><div><b>1 termini vençut</b><small>Exposició de les rectificacions del cens</small></div></div>
+        <div class="float f-badge f3"><span class="day">D21</span><div><b>Falten 33 dies</b><small>Presentació i proclamació</small></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap stats" id="stats">
+    <div><b data-count="110">110</b><span>tràmits de la LOREG, amb el seu article</span></div>
+    <div><b data-count="54">54</b><span>dies calculats des del BOE, sense fulls de càlcul</span></div>
+    <div><b data-count="3">3</b><span>tipus d’eleccions: generals, locals i europees</span></div>
+    <div><b data-count="0">0</b><span>dades personals fora de la vostra xarxa</span></div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="section problem">
+  <div class="wrap narrow reveal">
+    <p class="kicker">Per què existeix</p>
+    <h2>Unes eleccions són cinquanta-quatre dies sense marge d’error.</h2>
+    <p class="big">La Junta Electoral Central publica el calendari en PDF. Després, a cada ajuntament, algú el copia en un full de càlcul, el reparteix per correu i confia que ningú no s’oblidi del sorteig de meses, de l’exposició del cens o dels llocs per a la campanya. Quan la Junta mou una data, el full ja no serveix.</p>
+    <p class="big">Urnalia neix d’aquesta experiència en una secretaria municipal. Substitueix el full, el correu i la memòria per un únic lloc on hi ha tot: el termini legal, qui el porta, en quin punt és i quin document l’acredita.</p>
+  </div>
+</section>
+
+<!-- FUNCIONES -->
+<section class="section features" id="funciones">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="kicker">Funcions</p>
+      <h2>Tot el procés, de la convocatòria a la constitució de la corporació.</h2>
+      <p>Fes clic a qualsevol captura per veure-la a mida completa. Són pantalles reals del programa amb dades de demostració.</p>
+    </div>
+
+    <article class="feat reveal">
+      <div class="feat-txt">
+        <span class="num">01</span>
+        <h3>Seguiment: què toca avui</h3>
+        <p>En entrar, el primer que veus és la jornada: els terminis vençuts sense tancar, els que són en curs, els que vencen avui i els que comencen en els propers set dies. La barra de fases situa el dia del procés (D21, D38…) i compta el que falta per a la votació.</p>
+        <ul class="ticks"><li>Filtre per responsable: Ajuntament, Junta, Oficina del Cens, partits</li><li>Notes i responsables a cada tràmit</li><li>Informe de situació imprimible per a la reunió del matí</li></ul>
+      </div>
+      <button class="shot" data-full="/img/capturas/ca/seguimiento.webp" aria-label="Amplia la captura de Seguiment"><img src="/img/capturas/ca/seguimiento-sm.webp" alt="Pantalla de Seguiment amb terminis vençuts, en termini avui i propers" loading="lazy" width="1200" height="750"></button>
+    </article>
+
+    <article class="feat rev reveal">
+      <div class="feat-txt">
+        <span class="num">02</span>
+        <h3>Terminis legals amb el seu article</h3>
+        <p>Cada tràmit porta l’article de la LOREG o la instrucció de la Junta que el sustenta, les dates d’inici i de fi i la forma de còmput. Si la Junta Electoral acorda una altra data, es canvia i el programa demana el motiu, que queda al registre d’auditoria.</p>
+        <ul class="ticks"><li>Generals, locals i europees, amb les seves diferències</li><li>Tasques i fites pròpies de l’ajuntament</li><li>Moure les eleccions ho recalcula tot a l’instant</li></ul>
+      </div>
+      <button class="shot" data-full="/img/capturas/ca/plazos.webp" aria-label="Amplia la captura de Terminis"><img src="/img/capturas/ca/plazos-sm.webp" alt="Llista de tràmits amb article de la LOREG, dates i estat" loading="lazy" width="1200" height="750"></button>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-txt">
+        <span class="num">03</span>
+        <h3>Resum i fites del procés</h3>
+        <p>Una vista de direcció per al secretari o l’alcalde: fites de la convocatòria a la proclamació d’electes, terminis oberts, vençuts i tràmits municipals tancats. S’imprimeix en un full A4 per a la junta de portaveus.</p>
+        <ul class="ticks"><li>Fites pròpies marcades amb un rombe</li><li>Comptadors del que està tancat i del que està pendent</li></ul>
+      </div>
+      <button class="shot" data-full="/img/capturas/ca/panel.webp" aria-label="Amplia la captura de Resum"><img src="/img/capturas/ca/panel-sm.webp" alt="Resum amb fites del procés i comptadors" loading="lazy" width="1200" height="750"></button>
+    </article>
+
+    <div class="gallery reveal" role="tablist" aria-label="Més vistes del programa">
+      <div class="gal-tabs">
+        <button role="tab" aria-selected="true" data-g="gantt">Cronograma</button>
+        <button role="tab" aria-selected="false" data-g="calendario">Calendari</button>
+        <button role="tab" aria-selected="false" data-g="agenda">Agenda</button>
+        <button role="tab" aria-selected="false" data-g="ficha">Fitxa d’un tràmit</button>
+      </div>
+      <div class="gal-stage">
+        <button class="shot wide" id="galShot" data-full="/img/capturas/ca/gantt.webp" aria-label="Amplia la captura"><img id="galImg" src="/img/capturas/ca/gantt-sm.webp" alt="Cronograma dels tràmits electorals" loading="lazy" width="1200" height="750"></button>
+        <p class="gal-cap" id="galCap">Diagrama de Gantt dels 54 dies, amb la línia d’avui i la de la votació. Es veu d’un cop d’ull quins tràmits s’encavalquen.</p>
+      </div>
+    </div>
+
+    <article class="feat rev reveal">
+      <div class="feat-txt">
+        <span class="num">04</span>
+        <h3>Locals, meses i jornada electoral</h3>
+        <p>Enganxa les meses des de l’Excel de l’Oficina del Cens i Urnalia crea els locals, les meses i els seus nou membres. Porta el compte de notificacions, excuses i suplents, i prepara la jornada: espais per a la campanya, banderoles, pancartes i prismes.</p>
+        <ul class="ticks"><li>Codis d’alarma dels col·legis, visibles només amb permís</li><li>Llistats imprimibles per local</li><li>Portar els locals d’unes eleccions anteriors</li></ul>
+      </div>
+      <button class="shot" data-full="/img/capturas/ca/mesas.webp" aria-label="Amplia la captura de Meses"><img src="/img/capturas/ca/mesas-sm.webp" alt="Locals i meses amb membres notificats" loading="lazy" width="1200" height="750"></button>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-txt">
+        <span class="num">05</span>
+        <h3>Formacions, candidatures i documents</h3>
+        <p>Representants, telèfons i correus de cada formació; candidatures proclamades amb el seu seguiment; i els documents adjunts a cada tràmit (decrets, actes, notificacions), amb paperera per recuperar el que s’ha esborrat.</p>
+        <ul class="ticks"><li>Enganxar des de l’Excel o portar-ho d’altres eleccions</li><li>Agenda de contactes de la Junta, l’OCE i els serveis municipals</li></ul>
+      </div>
+      <button class="shot" data-full="/img/capturas/ca/formaciones.webp" aria-label="Amplia la captura de Formacions"><img src="/img/capturas/ca/formaciones-sm.webp" alt="Formacions amb representants i candidatures proclamades" loading="lazy" width="1200" height="750"></button>
+    </article>
+  </div>
+</section>
+
+<!-- CALCULADORA -->
+<section class="section calc" id="calculadora">
+  <div class="wrap">
+    <div class="calc-in reveal">
+      <div class="calc-copy">
+        <p class="kicker light">Prova-ho aquí</p>
+        <h2>Tria la data de la votació.</h2>
+        <p>És una mostra del càlcul que fa Urnalia: aquí veus sis dates clau; el programa en calcula cent deu. Funciona al teu navegador i no envia res enlloc.</p>
+        <label class="calc-field"><span>Dia de la votació</span><input type="date" id="calcVot" value="2026-11-29"></label>
+        <p class="calc-warn" id="calcWarn" hidden>Les eleccions se celebren en diumenge. Revisa la data.</p>
+      </div>
+      <ol class="timeline" id="calcOut" aria-live="polite">
+        <li><span class="d">D0</span><div><b>Publicació del decret al BOE</b><time data-off="0"></time></div></li>
+        <li><span class="d">D15</span><div><b>Presentació de candidatures</b><time data-off="15" data-to="20"></time></div></li>
+        <li><span class="d">D25</span><div><b>Sorteig dels membres de les meses</b><time data-off="25" data-to="29"></time></div></li>
+        <li><span class="d">D27</span><div><b>Proclamació de candidatures</b><time data-off="27"></time></div></li>
+        <li><span class="d">D38</span><div><b>Campanya electoral</b><time data-off="38" data-to="52"></time></div></li>
+        <li class="hl"><span class="d">D54</span><div><b>Votació</b><time data-off="54"></time></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- SEGURIDAD -->
+<section class="section security" id="seguridad">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="kicker">Seguretat i protecció de dades</p>
+      <h2>Pensat per a un servei d’informàtica municipal exigent.</h2>
+      <p>Urnalia tracta noms, telèfons i membres de mesa. Per això s’instal·la dins de la xarxa de l’ajuntament i cada peça està feta perquè el responsable de seguretat la pugui revisar.</p>
+    </div>
+    <div class="sec-grid">
+      <div class="card reveal"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4v6c0 4-3.4 7.4-8 8-4.6-.6-8-4-8-8z"/></svg></div><h3>Les dades es queden a casa</h3><p>S’instal·la en un equip o en un servidor de l’ajuntament. Cap núvol de tercers, cap transferència internacional, cap contracte d’encàrrec addicional.</p></div>
+      <div class="card reveal"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div><h3>Permisos per caselles</h3><p>Per a cada usuari i cada part del programa: sense accés, veure o modificar. El servidor comprova el permís a cada operació; amagar un botó no n’hi ha prou.</p></div>
+      <div class="card reveal"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z"/></svg></div><h3>Auditoria encadenada</h3><p>Qui va canviar què, quan, des de quin equip, amb el valor anterior i el nou. Cada anotació porta una empremta SHA-256 enllaçada amb l’anterior: si algú edita el registre a mà, es detecta.</p></div>
+      <div class="card reveal"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c.7-3.4 3-5 6-5s5.3 1.6 6 5"/><path d="M16 4.5a3 3 0 0 1 0 6M18 15c1.8.6 2.7 2.2 3 5"/></svg></div><h3>Directori actiu</h3><p>Cada treballador entra amb el seu usuari de Windows, contra el controlador de domini per LDAPS o STARTTLS. Urnalia no desa aquestes contrasenyes.</p></div>
+      <div class="card reveal"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 10h16M9 14h6"/></svg></div><h3>Còpies completes i restauració</h3><p>Còpies automàtiques en un ZIP amb l’empremta de cada fitxer, a la carpeta que trieu. Restaurar és un clic i abans es desa l’estat actual. L’auditoria no se sobreescriu mai.</p></div>
+      <div class="card reveal"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4l-5 8 5 8M16 4l5 8-5 8"/></svg></div><h3>Codi sense dependències</h3><p>El servidor no fa servir paquets de tercers: menys peces per mantenir i cap vulnerabilitat heretada de llibreries alienes. Contrasenyes amb PBKDF2 i sessions que caduquen soles.</p></div>
+    </div>
+    <p class="note reveal">Urnalia s’ha dissenyat tenint presents el Reglament general de protecció de dades i l’Esquema Nacional de Seguretat. La categorització del sistema i la declaració de conformitat corresponen a cada entitat; us facilitem la documentació tècnica que l’acompanyi.</p>
+  </div>
+</section>
+
+<!-- AUDITORÍA Y PERMISOS: capturas -->
+<section class="section duo">
+  <div class="wrap duo-in">
+    <figure class="reveal"><button class="shot" data-full="/img/capturas/ca/auditoria.webp" aria-label="Amplia la captura d’Auditoria"><img src="/img/capturas/ca/auditoria-sm.webp" alt="Registre d’auditoria amb la comprovació d’integritat superada" loading="lazy" width="1200" height="750"></button><figcaption><b>Registre d’auditoria.</b> Filtres per data, usuari i tipus; exportació a Excel; comprovació d’integritat.</figcaption></figure>
+    <figure class="reveal"><button class="shot" data-full="/img/capturas/ca/permisos.webp" aria-label="Amplia la captura de Permisos"><img src="/img/capturas/ca/permisos-sm.webp" alt="Finestra de permisos per caselles d’un usuari" loading="lazy" width="1200" height="750"></button><figcaption><b>Permisos per caselles.</b> Perfils a punt (Administrador, Secretaria, Consulta) o a mida.</figcaption></figure>
+  </div>
+</section>
+
+<!-- INSTALACIÓN -->
+<section class="section install" id="instalacion">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="kicker">Instal·lació</p>
+      <h2>Un instal·lador de Windows. Ni base de dades ni servidor web a part.</h2>
+    </div>
+    <div class="modes">
+      <div class="mode reveal">
+        <h3>En un equip</h3>
+        <p>Per a un municipi petit: s’instal·la a l’ordinador de secretaria i s’obre des d’una drecera. Funciona sense connexió a internet.</p>
+      </div>
+      <div class="mode reveal featured">
+        <h3>Servidor de xarxa</h3>
+        <p>S’instal·la una vegada en un servidor i la resta del personal hi entra amb el navegador des del seu lloc. S’engega sol amb Windows i obre el port només per a la xarxa interna.</p>
+      </div>
+    </div>
+    <ol class="steps reveal">
+      <li><b>Instal·lar</b><span>S’executa l’instal·lador amb un compte d’administrador i es tria el mode.</span></li>
+      <li><b>Crear l’administrador</b><span>Amb la clau d’instal·lació que el programa genera al mateix servidor.</span></li>
+      <li><b>Donar d’alta les eleccions</b><span>Tipus i data. Els terminis apareixen calculats.</span></li>
+      <li><b>Convidar l’equip</b><span>Usuaris propis o del directori actiu, amb els seus permisos.</span></li>
+    </ol>
+    <dl class="reqs reveal">
+      <div><dt>Sistema</dt><dd>Windows 10, 11 o Windows Server de 64 bits</dd></div>
+      <div><dt>Navegador</dt><dd>Edge, Chrome o Firefox actuals</dd></div>
+      <div><dt>Espai</dt><dd>Uns 150 MB més els documents que hi adjunteu</dd></div>
+      <div><dt>Actualitzar</dt><dd>S’executa l’instal·lador nou a sobre; les dades no es toquen</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- HOJA DE RUTA -->
+<section class="section roadmap">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="kicker">En desenvolupament</p>
+      <h2>El que arriba en les properes versions.</h2>
+    </div>
+    <div class="road">
+      <div class="road-item reveal"><span class="tag">Personal electoral · ja a la 1.3</span><h3>Muntadors, coordinadors, cabines, administratius</h3><p>Tipus de personal i llocs que defineix el mateix ajuntament, vinculats a cada col·legi. Importació des de l’Excel amb validació de DNI i IBAN i exportació dels pagaments en SEPA i per a SICAL.</p></div>
+      <div class="road-item reveal"><span class="tag">Calendaris</span><h3>Eleccions autonòmiques</h3><p>Calendaris oficials per tipus d’elecció, amb els articles de cada llei electoral autonòmica, comprovats amb convocatòries reals.</p></div>
+      <div class="road-item reveal"><span class="tag">Idiomes</span><h3>Llengües cooficials</h3><p>El català ja es pot veure a la prova en línia. Després arribarà a la versió instal·lable, juntament amb el valencià, el gallec, el basc i els documents.</p></div>
+      <div class="road-item reveal"><span class="tag">Documents</span><h3>Bans, edictes i avisos</h3><p>Plantilles amb l’escut de l’ajuntament, exportació a PDF i a calendari (ICS) i alertes per correu electrònic.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIOS -->
+<section class="section pricing" id="precios">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="kicker">Preus</p>
+      <h2>Llicència per trams de població. Sense quotes per usuari.</h2>
+      <p>Pagament únic per la llicència i un manteniment anual opcional que inclou les actualitzacions normatives. Imports pensats per cabre en un contracte menor.</p>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>Municipis</h3>
+        <p class="price"><small>des de</small> 300 €</p>
+        <p class="sub">llicència, IVA no inclòs</p>
+        <ul class="ticks"><li>Usuaris il·limitats</li><li>Instal·lació en equip o servidor</li><li>Totes les funcions de la versió vigent</li><li>Import segons el tram de població</li></ul>
+        <a class="btn btn-outline" href="#contacto">Demana pressupost</a>
+      </div>
+      <div class="plan reveal featured">
+        <span class="ribbon">Recomanat</span>
+        <h3>Diputacions</h3>
+        <p class="price">Conveni provincial</p>
+        <p class="sub">un contracte per a tots els municipis</p>
+        <ul class="ticks"><li>Llicència per als ajuntaments de la província</li><li>Instal·lació centralitzada o a cada municipi</li><li>Formació als secretaris</li><li>Interlocutor únic</li></ul>
+        <a class="btn btn-primary" href="#contacto">En parlem</a>
+      </div>
+      <div class="plan reveal">
+        <h3>Manteniment</h3>
+        <p class="price"><small>des de</small> 90 € <small>/any</small></p>
+        <p class="sub">opcional, IVA no inclòs</p>
+        <ul class="ticks"><li>Actualitzacions a cada canvi normatiu</li><li>Noves versions del programa</li><li>Suport per correu electrònic</li><li>Ajuda abans de cada convocatòria</li></ul>
+        <a class="btn btn-outline" href="#contacto">Més informació</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREGUNTAS -->
+<section class="section faq" id="preguntas">
+  <div class="wrap narrow">
+    <div class="head reveal">
+      <p class="kicker">Preguntes freqüents</p>
+      <h2>El que solen preguntar secretaries i informàtica.</h2>
+    </div>
+    <div class="qa reveal">
+      <details><summary>Substitueix les aplicacions de l’Oficina del Cens Electoral?</summary><p>No. El sorteig de meses i el cens es continuen fent amb les eines oficials. Urnalia organitza la feina al voltant: terminis, responsables, meses importades dels vostres llistats, personal, documents i seguiment.</p></details>
+      <details><summary>D’on surten els terminis?</summary><p>De la Llei orgànica del règim electoral general i de les instruccions de la Junta Electoral Central, amb l’article indicat a cada tràmit. El còmput parteix de la publicació del decret al BOE (dia 0) i arriba a la votació (dia 54) i a la constitució de la corporació en les locals.</p></details>
+      <details><summary>I si la Junta Electoral canvia una data?</summary><p>S’ajusta a mà a la fitxa del tràmit. El programa demana el motiu, per exemple l’acord de la Junta de Zona, i l’anota al registre d’auditoria amb el nom de qui l’ha canviat.</p></details>
+      <details><summary>La prova en línia desa el que escric?</summary><p>Només al vostre navegador, i fins a la nit. Cada visitant té la seva pròpia còpia de les dades d’exemple, no s’envia res a cap servidor i cada nit tot torna al punt de partida. No es poden pujar fitxers.</p></details>
+      <details><summary>Necessita internet?</summary><p>No. Funciona dins de la xarxa de l’ajuntament, fins i tot en un equip sense connexió. Només cal internet per descarregar una versió nova.</p></details>
+      <details><summary>Quants usuaris pot tenir?</summary><p>Els que necessiteu. La llicència no es cobra per usuari.</p></details>
+      <details><summary>Què passa amb les dades d’unes eleccions quan acaba el procés?</summary><p>S’arxiven íntegres i queden en mode de només lectura, consultables a «Arxiu». Les eleccions següents poden portar locals, meses i formacions de les anteriors.</p></details>
+      <details><summary>Es pot provar abans de comprar?</summary><p>Sí, i sense instal·lar res. Demaneu l’accés a la prova en línia i entreu-hi des del navegador: és el programa complet amb un ajuntament d’exemple, en català i en castellà. Si després el voleu veure amb algú que us l’expliqui, us fem una demostració guiada per videoconferència.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- PRUEBA ONLINE -->
+<section class="section trial" id="prueba">
+  <div class="wrap trial-in">
+   <div class="trial-copy">
+    <div class="head reveal">
+      <p class="kicker">Prova en línia</p>
+      <h2>Toqueu-lo vosaltres. Sense instal·lar res.</h2>
+      <p>El programa complet al navegador, amb les eleccions generals d’un ajuntament fictici ja en marxa: terminis, meses, formacions, campanya i personal. Canvieu el que vulgueu; cada nit tot torna a començar.</p>
+    </div>
+    <ol class="steps trial-steps reveal">
+      <li><b>Demaneu l’accés</b><span>Un correu amb el nom de l’ajuntament o de la diputació.</span></li>
+      <li><b>Rebeu la contrasenya</b><span>Us l’enviem per correu, normalment el mateix dia.</span></li>
+      <li><b>Entreu a la prova</b><span>Com a administració o com a secretaria, per veure els permisos.</span></li>
+      <li><b>Trieu l’idioma</b><span>Català o castellano, i es canvia en qualsevol moment.</span></li>
+    </ol>
+    <div class="trial-cta reveal">
+      <a class="btn btn-primary btn-lg" href="mailto:info@urnalia.es?subject=Acc%C3%A9s%20a%20la%20prova%20d%E2%80%99Urnalia&amp;body=Hola%3A%0A%0AS%C3%B3c%20%5Bnom%20i%20cognoms%5D%2C%20%5Bc%C3%A0rrec%5D%20de%20l%E2%80%99Ajuntament%20de%20%5Bmunicipi%5D%20(%5Bprov%C3%ADncia%5D).%0A%0AEns%20interessa%20avaluar%20Urnalia%20i%20voldr%C3%ADem%20rebre%20la%20contrasenya%20d%E2%80%99acc%C3%A9s%20a%20la%20prova%20en%20l%C3%ADnia.%0A%0ATel%C3%A8fon%20de%20contacte%3A%20%5Btel%C3%A8fon%5D%0A%0AGr%C3%A0cies.">Demana l’accés a la prova</a>
+      <a class="btn btn-outline btn-lg" href="/demo/?l=ca">Ja tinc contrasenya <span aria-hidden="true">→</span></a>
+    </div>
+    <ul class="trial-langs reveal" aria-label="Idiomes de la prova"><li lang="ca">Català</li><li lang="es">Castellano</li></ul>
+   </div>
+   <div class="trial-shot reveal" aria-hidden="true">
+     <div class="browser">
+       <div class="bar"><i></i><i></i><i></i><span>urnalia.es/demo</span></div>
+       <img src="/img/capturas/ca/prueba-sm.webp" srcset="/img/capturas/ca/prueba-sm.webp 1200w, /img/capturas/ca/prueba.webp 2400w" sizes="(max-width: 900px) 92vw, 560px" alt="" width="1200" height="750" loading="lazy">
+     </div>
+     <span class="trial-badge"><b>DEMO</b> Català · Castellano</span>
+   </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section contact" id="contacto">
+  <div class="wrap">
+    <div class="contact-in reveal">
+      <div>
+        <h2>Us ha convençut? Ho mirem junts amb les vostres eleccions.</h2>
+        <p>Després de la prova, una demostració guiada de trenta minuts per videoconferència per resoldre dubtes de secretaria i informàtica i preparar la instal·lació. Escriviu-nos indicant l’ajuntament o la diputació i un telèfon.</p>
+      </div>
+      <div class="contact-box">
+        <a class="mail" href="mailto:info@urnalia.es?subject=Demostraci%C3%B3%20guiada%20d%E2%80%99Urnalia&amp;body=Hola%3A%0A%0AS%C3%B3c%20%5Bnom%20i%20cognoms%5D%2C%20%5Bc%C3%A0rrec%5D%20de%20l%E2%80%99Ajuntament%20de%20%5Bmunicipi%5D%20(%5Bprov%C3%ADncia%5D).%0A%0AHem%20provat%20Urnalia%20i%20ens%20agradaria%20una%20demostraci%C3%B3%20guiada%20per%20videoconfer%C3%A8ncia.%20Ens%20aniria%20b%C3%A9%20%5Bdia%20i%20hora%5D.%0A%0ATel%C3%A8fon%20de%20contacte%3A%20%5Btel%C3%A8fon%5D%0A%0AGr%C3%A0cies.">info@urnalia.es</a>
+        <a class="btn btn-primary btn-lg" href="mailto:info@urnalia.es?subject=Demostraci%C3%B3%20guiada%20d%E2%80%99Urnalia&amp;body=Hola%3A%0A%0AS%C3%B3c%20%5Bnom%20i%20cognoms%5D%2C%20%5Bc%C3%A0rrec%5D%20de%20l%E2%80%99Ajuntament%20de%20%5Bmunicipi%5D%20(%5Bprov%C3%ADncia%5D).%0A%0AHem%20provat%20Urnalia%20i%20ens%20agradaria%20una%20demostraci%C3%B3%20guiada%20per%20videoconfer%C3%A8ncia.%20Ens%20aniria%20b%C3%A9%20%5Bdia%20i%20hora%5D.%0A%0ATel%C3%A8fon%20de%20contacte%3A%20%5Btel%C3%A8fon%5D%0A%0AGr%C3%A0cies.">Demana una demostració guiada</a>
+        <a class="btn btn-light" href="#prueba">Abans, provar-lo pel meu compte</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="brand"><img class="brand-logo" src="/img/urnalia-logo.webp" alt="Urnalia" width="137" height="44"></div>
+    <p>Planificació i control de processos electorals per a ajuntaments i diputacions.</p>
+    <nav aria-label="Legal"><a href="/ca/avis-legal.html">Avís legal</a><a href="/ca/privacitat.html">Privacitat</a><a href="/ca/accessibilitat.html">Accessibilitat</a></nav>
+    <p class="copy">© 2026 Urnalia. Tots els drets reservats. Aquest web no fa servir galetes ni recull dades.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Captura ampliada">
+  <button class="lb-close" id="lbClose" aria-label="Tanca">×</button>
+  <img id="lbImg" alt="">
+</div>
+</body>
+</html>
