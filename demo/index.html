@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; frame-src 'self' blob:; worker-src 'self' blob:; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0b1730">
+<title>Prueba de Urnalia</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="acceso.css">
+</head>
+<body>
+<main class="gate">
+  <div class="bg" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="grid"></span></div>
+  <form class="card" id="f" autocomplete="off" novalidate>
+    <a class="logo" href="/" aria-label="Urnalia"><img src="../img/urnalia-logo.webp" alt="Urnalia" width="183" height="59"></a>
+    <p class="kicker" data-t="kicker">Prueba online</p>
+    <h1 data-t="h1">Urnalia, en tu navegador.</h1>
+    <p class="lead" data-t="lead">El programa completo, con las elecciones generales de un ayuntamiento ficticio ya en marcha. Cambia lo que quieras: cada noche todo vuelve a empezar.</p>
+    <label class="fld"><span data-t="lang">Idioma</span>
+      <select id="lang"><option value="es">Castellano</option><option value="ca">Català</option><option value="gl">Galego</option><option value="eu">Euskara</option></select>
+    </label>
+    <label class="fld"><span data-t="pw">Contraseña de acceso</span>
+      <input type="password" id="pw" autocomplete="current-password" required>
+    </label>
+    <p class="err" id="err" role="alert" hidden></p>
+    <button class="btn" id="go" type="submit" data-t="go">Entrar en la prueba</button>
+    <p class="small"><span data-t="nopw">¿No tienes contraseña?</span> <a id="ask" href="mailto:info@urnalia.es?subject=Acceso%20a%20la%20prueba%20de%20Urnalia" data-t="ask">Solicítala</a></p>
+    <ul class="facts">
+      <li data-t="f1">Sin instalar nada</li>
+      <li data-t="f2">Los datos no salen de tu equipo</li>
+      <li data-t="f3">Castellano, català, galego y euskara</li>
+    </ul>
+  </form>
+</main>
+<script src="acceso.js"></script>
+</body>
+</html>
