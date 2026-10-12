@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: https://urnalia.goatcounter.com; font-src 'self'; connect-src https://urnalia.goatcounter.com; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: https://urnalia.goatcounter.com; font-src 'self'; connect-src 'self' https://urnalia.goatcounter.com; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Urnalia · Programa de gestión electoral para ayuntamientos</title>
 <meta name="description" content="Programa para ayuntamientos: calcula los plazos de la LOREG, avisa de cada trámite y organiza mesas, locales, documentos y personal electoral.">
@@ -139,8 +139,8 @@
       <button class="shot" data-full="img/capturas/panel.webp" aria-label="Ampliar la captura de Resumen"><img src="img/capturas/panel-sm.webp" alt="Resumen con hitos del proceso y contadores" loading="lazy" width="1200" height="750"></button>
     </article>
 
-    <div class="gallery reveal" role="tablist" aria-label="Más vistas del programa">
-      <div class="gal-tabs">
+    <div class="gallery reveal">
+      <div class="gal-tabs" role="tablist" aria-label="Más vistas del programa">
         <button role="tab" aria-selected="true" data-g="gantt">Cronograma</button>
         <button role="tab" aria-selected="false" data-g="calendario">Calendario</button>
         <button role="tab" aria-selected="false" data-g="agenda">Agenda</button>

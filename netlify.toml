@@ -4,3 +4,28 @@
 [build]
   publish = "."
   command = "echo 'Web estatica: nada que compilar'"
+
+# urnalia.com y www.urnalia.com redirigen permanentemente a urnalia.es (una sola web para Google)
+[[redirects]]
+  from = "https://urnalia.com/*"
+  to = "https://urnalia.es/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.urnalia.com/*"
+  to = "https://urnalia.es/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://urnalia.com/*"
+  to = "https://urnalia.es/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.urnalia.com/*"
+  to = "https://urnalia.es/:splat"
+  status = 301
+  force = true
