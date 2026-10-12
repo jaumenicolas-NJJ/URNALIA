@@ -1,0 +1,3 @@
+# Carpeta local de Netlify y scripts de configuracion
+.netlify
+netlify-*.cmd

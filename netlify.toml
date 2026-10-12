@@ -1,0 +1,6 @@
+# Netlify publica la web tal cual desde la raiz del repositorio (no hay que compilar nada).
+# Las cabeceras de seguridad estan en _headers. Cada pagina mantiene ademas su propia
+# Content-Security-Policy en <meta>, que sigue siendo la que limita scripts y estilos.
+[build]
+  publish = "."
+  command = "echo 'Web estatica: nada que compilar'"
