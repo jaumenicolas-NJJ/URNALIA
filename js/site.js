@@ -17,6 +17,10 @@
     menu.addEventListener('click', function (e) { if (e.target.closest('a')) { toggle.setAttribute('aria-expanded', 'false'); menu.classList.remove('open'); } });
   }
 
+  /* las animaciones de la portada se paran cuando sale de la pantalla */
+  var heroEl = d.querySelector('.hero');
+  if (heroEl && 'IntersectionObserver' in window) new IntersectionObserver(function (es) { heroEl.classList.toggle('off', !es[0].isIntersecting); }).observe(heroEl);
+
   /* aparición al entrar en pantalla */
   var items = d.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && !reduce) {
